@@ -16,7 +16,7 @@ In which, you can just copy stuff one after other in rapid succession with Ctrl+
 **Append Mode:**  
 You can choose some characters, known as 'appending characters', then, whatever string you copy, these characters will be apppended to it, at the end it. The next you string you copy, gets appended after that and again the appending characters get appended, and so on..  
 
-**CAGR Calculator:**
+**CAGR Calculator:**  
 There is a very easy way to calculate CAGRs rapidly if needed and if the data (numbers) are tab seperated.
 Suppose you want to calculate CAGR between 'm' and 'n', eliffor a time interval 't':
 Shift + Left click to select m, Shift + Right Click to select n. if both numbers are valid, it directly finds the t by finding number of tabs in between and subsequently finds CAGR. In case you want to enter time manually, click 'time?' at the bottom right then type the time you want. Accepted formats: '2', '5/12', '3.5', '4.5/12.5'.
@@ -99,14 +99,12 @@ There are some **major differences** for the scripts for Ubuntu and Windows:
 
 * In Ubuntu, the loop which calls the OnKeyboardEvent function is already in another thread, according to the way pyxhook was created. Hence, all the pygame stuff and Keylogger stuff is in different threads.
 However, in Windows, the loop calling of the OnKeyboardEvent is either procesed by pythoncom or by pygame.event. Putting these commands in different threads crashes the whole program. Also, you cannot put lot of commands in the OnKeyboardEvent function. When any mouse/keyboard event is detected by Windows, the event is sent to the python script. Only when the script returns True, is the event sent to other programs. If the OnKeyBoardEvent takes too much time before retruning True, it will result in an OS-wide slowdown of Mouse and Keyboard, which is soon detected by Windows and then it will stop sending events to the script and bypass it instead.  
-
-Also, your main loop can also not be very slow, as the above effect holds in case when the OnKeyboardEvent takes too much time or is called very less frequently compared to actual speed of events. This arises when the mainloop has very high execution time resulting in the pygane.event or pythoncom commands getting called very less frequrntly.  
-
+Also, your main loop can also not be very slow, as the above effect holds in case when the OnKeyboardEvent takes too much time or is called very less frequently compared to actual speed of events. This arises when the mainloop has very high execution time resulting in the pygane.event or pythoncom commands getting called very less frequently.  
 Hence, The processes that took most time (text processing and display commands) have been put into another function, disp (display), and this function is executed in another thread. A boolean variable 'cha' takes care that two instances of disp may not run at the same time.  
 
 * Ubuntu doesn't have an alternate of the library I used for Windows - pyHook  
 Hence, I got this file from the pyhook project: https://github.com/herherher/python-keylogger  (Thanks to herherher)
-Just keep the file in the same folder
+Just keep the file in the same folder anf then you wil be able to compile it.  
 
 
 **Planned updates:**  
