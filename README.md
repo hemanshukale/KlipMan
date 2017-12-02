@@ -1,6 +1,7 @@
 # KlipMan
 A Clipboard Manager with some pretty unique features
 
+All code is here, while the executables are up for grab in https://sourceforge.net/projects/klipman/
 
 Hello All, 
 
@@ -128,9 +129,12 @@ Just keep the file in the same folder anf then you wil be able to compile it.
 
 
 **Note:**  
-This software tracks all your keystrokes. Though it doesn't record them, it maybe enough of a reason to get paranoid. You are free to check the whole code and compile your own. All is open source. Also, this keylogging can be tweaked and used for some not so legal stuff, so, be careful and use it wisely. 
 
 I've also attached a readme pdf for instructions with images.  
+
+This software tracks all your keystrokes. Though it doesn't record them, it maybe enough of a reason to get paranoid. You are free to check the whole code and compile your own. All is open source. Also, this keylogging can be tweaked and used for some not so legal stuff, so, be careful and use it wisely. 
+
+
 
 
 **PS:**  
